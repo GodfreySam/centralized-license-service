@@ -43,12 +43,12 @@ class LicenseActivationTests(TestCase):
             instance_id="https://www.godfreyo.link"
         )
 
-        # Attempt to activate a second seat
+        # Attempt to activate a second seat (different instance)
         with self.assertRaises(PermissionDenied) as context:
             LicenseService.activate_license(
                 key_string=self.license_key,
                 product_slug="rankmath-seo",
-                instance_id="https://www.godfreyo.link"
+                instance_id="https://www.godfreyo-second.link"
             )
 
         self.assertIn("Seat limit reached", str(context.exception))

@@ -2,7 +2,7 @@ from datetime import timedelta
 
 from django.db import transaction
 from django.utils import timezone
-from rest_framework.exceptions import PermissionDenied, ValidationError
+from django.core.exceptions import PermissionDenied, ValidationError
 
 from .models import Activation, License, LicenseKey, Product
 
