@@ -1,0 +1,21 @@
+[
+	{
+		"model": "licenses.brand",
+		"pk": 1,
+		"fields": {
+			"name": "RankMath",
+			"api_key": "11111111-1111-1111-1111-111111111111",
+			"created_at": "2024-01-01T00:00:00Z"
+		}
+	},
+	{
+		"model": "licenses.product",
+		"pk": 1,
+		"fields": {
+			"brand": 1,
+			"name": "RankMath SEO",
+			"slug": "rankmath-seo",
+			"default_seats": 1
+		}
+	}
+]
